@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VO2 Max Estimator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>VO2 Max Estimator</h1>
+    </header>
+    <main>
+        <div id="form-container">
+            <form id="vo2-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="15" max="100" value="25">
+
+                <label for="sex">Sex:</label>
+                <select id="sex" name="sex">
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+
+                <label for="weight">Body Weight (kg):</label>
+                <input type="number" id="weight" name="weight" min="30" max="200" value="70">
+
+                <label for="workload">Workload (Watts):</label>
+                <input type="number" id="workload" name="workload" min="150" max="600" value="300" step="50">
+
+                <label for="avg_hr">Average Heart Rate (bpm):</label>
+                <input type="number" id="avg_hr" name="avg_hr" min="100" max="200" value="150">
+
+                <button type="submit">Calculate VO2 Max</button>
+            </form>
+        </div>
+        <div id="results-container">
+            <div id="results">
+                <h2>Results</h2>
+                <div id="results-grid"></div>
+            </div>
+            <div id="chart"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 VO2 Max Estimator</p>
+    </footer>
+    <script src="client.js"></script>
+</body>
+</html>

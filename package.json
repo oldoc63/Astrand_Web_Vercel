@@ -1,0 +1,12 @@
+{
+  "name": "vo2max-web-app",
+  "version": "1.0.0",
+  "description": "A web application for estimating VO2 max.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

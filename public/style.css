@@ -1,0 +1,153 @@
+:root {
+    --primary-color: #005f73;
+    --secondary-color: #003e4d;
+    --background-color: #f4f7f6;
+    --text-color: #333;
+    --white: #fff;
+    --border-color: #ccc;
+    --success-color: #007f5f;
+    --success-bg: #e8f5e9;
+    --shadow-color: rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+#form-container {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+form button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+}
+
+#results-container {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+#results h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+#results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.metric {
+    background-color: var(--background-color);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.metric-label {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.metric-value {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.classification {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--success-color);
+    background-color: var(--success-bg);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    grid-column: 1 / -1;
+}
+
+#chart {
+    min-height: 400px;
+    width: 100%;
+}
+
+@media (min-width: 769px) {
+    main {
+        flex-direction: row;
+    }
+
+    #form-container {
+        width: 350px;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    #results-container {
+        flex: 1;
+    }
+}
